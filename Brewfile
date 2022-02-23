@@ -1,3 +1,5 @@
+tap "homebrew/cask-fonts"
+
 brew "fzf"
 brew "gh"
 brew "git"
