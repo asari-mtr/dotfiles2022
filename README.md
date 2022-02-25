@@ -3,7 +3,7 @@
 ## Install from brew
 
 ```
-brew bundle install --verbose
+brew bundle install --global --verbose
 ```
 
 ## Install tpm for tmux
