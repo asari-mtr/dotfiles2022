@@ -23,7 +23,13 @@ Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
+
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
+
+" set theme
+set background=dark
+colorscheme solarized
 
 " for dev icons
 set encoding=UTF-8
@@ -68,10 +74,10 @@ nmap s <Plug>(easymotion-w)
 nmap S <Plug>(easymotion-b)
 
 " 
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+" nnoremap <leader>n :NERDTreeFocus<CR>
+" nnoremap <C-n> :NERDTree<CR>
+" nnoremap <C-t> :NERDTreeToggle<CR>
+" nnoremap <C-f> :NERDTreeFind<CR>
 
 " Nerd toggle_window
 let g:toggle_window_size = 0
