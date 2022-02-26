@@ -23,6 +23,8 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 #
 zinit load robobenklein/zdharma-history-search-multi-word
+zinit load zsh-users/zsh-completions
+zinit load zsh-users/zsh-syntax-highlighting
 
 # for starship
 eval "$(starship init zsh)"
@@ -34,6 +36,7 @@ setopt correct
 setopt noautoremoveslash
 
 # no beep sound
+setopt nobeep
 setopt nolistbeep
 
 ## Command history configuration
