@@ -47,6 +47,7 @@ set incsearch
 set laststatus=2
 set noswapfile
 set number
+set relativenumber
 set ruler
 set scrolloff=5
 set showcmd
@@ -72,6 +73,9 @@ let mapleader = "\<Space>"
 " easymotion
 nmap s <Plug>(easymotion-w)
 nmap S <Plug>(easymotion-b)
+
+noremap j gj
+noremap k gk
 
 " 
 " nnoremap <leader>n :NERDTreeFocus<CR>
