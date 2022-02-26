@@ -9,7 +9,9 @@ brew "rg"
 brew "tig"
 brew "tmux"
 brew "tldr"
+
 brew "zsh"
+brew "starship"
 
 cask "alfred"
 cask "bettertouchtool"
