@@ -9,6 +9,7 @@ brew "rg"
 brew "tig"
 brew "tmux"
 brew "tldr"
+brew "zsh-completion"
 
 brew "zsh"
 brew "starship"

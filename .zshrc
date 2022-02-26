@@ -33,6 +33,9 @@ setopt correct
 # no remove postfix slash of command line
 setopt noautoremoveslash
 
+# no beep sound
+setopt nolistbeep
+
 ## Command history configuration
 HISTFILE=${HOME}/.zsh_history
 HISTSIZE=50000
@@ -75,3 +78,5 @@ setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 
+autoload -Uz compinit
+compinit
