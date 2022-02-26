@@ -29,6 +29,9 @@ zinit load zsh-users/zsh-syntax-highlighting
 # for starship
 eval "$(starship init zsh)"
 
+# for anyenv
+eval "$(anyenv init -)"
+
 # command correct edition before each completion attempt
 setopt correct
 

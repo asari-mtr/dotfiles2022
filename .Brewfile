@@ -1,5 +1,6 @@
 tap "homebrew/cask-fonts"
 
+brew "anyenv"
 brew "fzf"
 brew "gh"
 brew "git"
@@ -9,6 +10,7 @@ brew "rg"
 brew "tig"
 brew "tmux"
 brew "tldr"
+brew "gh"
 
 brew "zsh"
 brew "starship"
