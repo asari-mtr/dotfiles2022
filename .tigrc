@@ -69,7 +69,7 @@
 
 set blame-view	= id:yes,color file-name:auto author:full date:default line-number:yes,interval=1 text
 set grep-view	= file-name:no line-number:yes,interval=1 text
-set main-view	= line-number:no,interval=5 id:no date:default author:full commit-title:yes,graph,refs,overflow=no
+set main-view	= id:yes line-number:no,interval=5 date:default author:full commit-title:yes,graph,refs,overflow=no
 set reflog-view	= line-number:no,interval=5 id:yes date:no author:no commit-title:yes,refs,overflow=no
 set refs-view	= line-number:no id:no date:default author:full ref commit-title
 set stash-view	= line-number:no,interval=5 id:no date:default author:full commit-title
@@ -139,7 +139,7 @@ set split-view-width		= 50%		# Width of right-most view for vertical splits
 set editor-line-number		= yes		# Automatically pass line number to editor? Used
 						# for opening file at specific line e.g. from a diff
 set history-size		= 500		# Size of persistent history, 0 to disable
-set mouse			= no		# Enable mouse support?
+set mouse			= yes		# Enable mouse support?
 set mouse-scroll		= 3		# Number of lines to scroll via the mouse
 set mouse-wheel-cursor		= no		# Prefer moving the cursor to scrolling the view?
 set pgrp			= no		# Make tig process-group leader
@@ -183,6 +183,7 @@ set pgrp			= no		# Make tig process-group leader
 
 bind main	C	?git cherry-pick %(commit)
 bind status	C	!git commit
+bind status	x	!rm -f %(file)
 bind stash	A	?git stash apply %(stash)
 bind stash	P	?git stash pop %(stash)
 bind stash	!	?git stash drop %(stash)
@@ -190,6 +191,10 @@ bind refs	C	?git checkout %(branch)
 bind refs	!	?git branch -D %(branch)
 bind reflog	C	?git checkout %(branch)
 bind reflog	!	?git reset --hard %(commit)
+
+bind main c ?git checkout %(branch)
+bind main m ?git rebase main %(branch)
+bind main i !git rebase -i %(commit)
 
 # Normal commands
 # ---------------
@@ -258,10 +263,14 @@ bind generic	<C-D>	move-half-page-down
 bind generic	<C-U>	move-half-page-up
 bind generic	<PgDown> move-page-down
 bind generic	<Space>	move-page-down
+bind generic	<Ctrl-f>	move-page-down
 bind generic	<PgUp>	move-page-up
+bind generic	<Ctrl-b>	move-page-up
 bind generic	-	move-page-up
 bind generic	<Home>	move-first-line
+bind generic	g	move-first-line
 bind generic	<End>	move-last-line
+bind generic	G	move-last-line
 
 # Scrolling
 bind generic	|	scroll-first-col
@@ -273,8 +282,8 @@ bind generic	<Del>	scroll-line-down
 bind generic	<C-E>	scroll-line-down
 bind generic	<SBack>	scroll-page-up
 bind generic	<SFwd>	scroll-page-down
-# bind generic	???	scroll-half-page-up
-# bind generic	???	scroll-half-page-down
+bind generic	<C-U>	scroll-half-page-up
+bind generic	<C-D> scroll-half-page-down
 
 # Searching
 bind generic	/	search
