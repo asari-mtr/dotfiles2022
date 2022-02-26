@@ -1,0 +1,40 @@
+# This is Git's per-user configuration file.
+[user]
+  name = Mitsuteru Asari 
+  email = asari.mtr@gmail.com
+[alias]
+  master = checkout master
+  main = checkout main
+  co = checkout
+  cb = checkout -b
+  pushr = push origin HEAD --set-upstream
+  cm = commit -m
+  s = status
+  l = log --graph --pretty=format:'%C(yellow)%h%Cgreen%d%Creset %s %C(cyan bold)%an, %ar%Creset'
+  d = diff
+  dc = diff --cached
+  dn = diff --name-only
+  ds = diff --stat
+  dsm = diff master... --stat
+  ap = add -p
+  aa = add .
+  wip = commit --allow-empty -m
+  f = fetch
+  tags = tag -l
+  branches = branch -a -v
+  remotes = remote -v
+[merge]
+  tool = vimdiff
+[color]
+  ui = auto
+[core]
+  editor = /usr/local/bin/nvim
+[github]
+  user = asari-mtr
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[push]
+	default = simple
+[rebase]
+	autosquash = true
