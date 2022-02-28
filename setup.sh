@@ -19,15 +19,16 @@ do
   fi
 done
 
+
+CONF_PATH=~/.config
+mkdir -p $CONF_PATH
+
+# for starship
+ln -s $PWD/starship.toml $CONF_PATH/starship.toml
+
 # for nvim
 NVIM_CONF=~/.config/nvim
-mkdir -p $NVIM_CONF
-if [[ -e $NVIM_CONF/init.vim ]]; then
-  echo "File exists init.vim"
-else
-  ln -s $PWD/init.vim $NVIM_CONF/init.vim
-  echo "File created init.vim"
-fi
+ln -s $PWD/init.vim $NVIM_CONF/init.vim
 
 brew bundle install --file .Brewfile --verbose --no-upgrade --no-lock
 
