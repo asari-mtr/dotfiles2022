@@ -1,4 +1,6 @@
 # This is Git's per-user configuration file.
+[include]
+  path=~/.gitconfig.env
 [user]
   name = Mitsuteru Asari 
   email = asari.mtr@gmail.com

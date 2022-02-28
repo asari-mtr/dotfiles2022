@@ -4,6 +4,7 @@ DOT_FILES=(.zshrc .tmux.conf .tigrc .gitconfig)
 if !(type brew > /dev/null 2>&1); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+touch ~/.gitconfig.env
 
 # if !(type brew > /dev/null 2>&1); then
 #   DOT_FILES=(.Brewfile .Brewfile-cask "${DOT_FILES[@]}")
