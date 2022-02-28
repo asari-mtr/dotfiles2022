@@ -36,7 +36,8 @@ brew bundle install --file .Brewfile --verbose --no-upgrade --no-lock
 echo ""
 echo "#####################################################################"
 echo "If you need to, please install it manually with the following command."
-echo "$ brew bundle install --file .Brewfile-cask--verbose --no-upgrade --no-lock"
+echo ""
+echo "$ brew bundle install --file .Brewfile-cask --verbose --no-upgrade --no-lock"
 echo "#####################################################################"
 echo ""
 
