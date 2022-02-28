@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 DOT_FILES=(.zshrc .tmux.conf .tigrc .gitconfig)
 
+# Install brew
 if !(type brew > /dev/null 2>&1); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
@@ -20,7 +21,6 @@ do
   fi
 done
 
-
 CONF_PATH=~/.config
 mkdir -p $CONF_PATH
 
@@ -32,6 +32,13 @@ NVIM_CONF=~/.config/nvim
 ln -s $PWD/init.vim $NVIM_CONF/init.vim
 
 brew bundle install --file .Brewfile --verbose --no-upgrade --no-lock
+
+# Install tpm
+TMUX_PLUIGINS=~/.tmux/plugins
+mkdir -p $TMUX_PLUGINS
+if [ ! -d $TMUX_PLUGINS/tpm ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
 
 echo ""
 echo "#####################################################################"
