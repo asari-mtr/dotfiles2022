@@ -184,6 +184,8 @@ set pgrp			= no		# Make tig process-group leader
 bind main	C	?git cherry-pick %(commit)
 bind status	C	!git commit
 bind status	x	!rm -f %(file)
+bind status	v	!vim %(file)
+bind stage  v	!vim %(file)
 bind stash	A	?git stash apply %(stash)
 bind stash	P	?git stash pop %(stash)
 bind stash	!	?git stash drop %(stash)
