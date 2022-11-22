@@ -68,7 +68,7 @@ set inccommand=split
 
 set ttimeoutlen=10
 
-let mapleader = "\<Space>"
+let mapleader = "\<SPACE>"
 
 " easymotion
 nmap s <Plug>(easymotion-w)
