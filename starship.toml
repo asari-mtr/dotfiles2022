@@ -1,2 +1,17 @@
 [java]
 style = "red"
+
+[kubernetes]
+disabled = false
+style = "red"
+
+contexts = [
+  { context_pattern = ".*beta.*", style = "blue" },
+  { context_pattern = ".*alpha.*", style = "green" },
+]
+
+[git_commit]
+only_detached = false
+
+[git_metrics]
+disabled = false
