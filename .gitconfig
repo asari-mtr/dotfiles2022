@@ -30,7 +30,7 @@
 [color]
   ui = auto
 [core]
-  editor = /usr/local/bin/nvim
+  editor = /opt/homebrew/bin/nvim
 [github]
   user = asari-mtr
 [difftool "sourcetree"]
